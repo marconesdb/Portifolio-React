@@ -6,7 +6,8 @@ import CalculadoraCientífica from '../assets/img/Calculadora Científica.png';
 import TrabalhadoresDaUltimaHora from '../assets/img/Trabalhadores da Última Hora.png';
 import NovoProjetoImg from '../assets/img/Trabalhadores da Última Hora.png';
 import { Link } from 'react-router-dom';
-import Avatar from '../assets/img/avatar.jpg';
+import Avatar from '../assets/img/avatar2.png';
+
 
 const ProjectCard = ({ imageUrl, title, description, link, onCardClick }) => {
   return (

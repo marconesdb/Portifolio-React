@@ -1,9 +1,7 @@
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
 import FotoMarcone from '../assets/img/fotor-202401108231.png';
-import { Link } from 'react-router-dom';
-
-
+import Download from './Download';
 
 const fadeIn = keyframes`
   from {
@@ -56,36 +54,43 @@ const BannerImage = styled.img`
 `;
 
 const Banner = () => {
-  return (
+  const handleDownload = () => {
+    const link = document.createElement('a');
+    link.download = 'nome-do-arquivo.pdf'; // nome do arquivo a ser baixado
+    link.href = '/assets/img/daeonline.pdf'; // caminho absoluto do arquivo
+    link.click();
+  };
 
-    <body  className="mt-24">
-      
-   
-      <BannerSection id="1" >
+  return (
+    <div className="mt-24">
+      <BannerSection id="1">
         <div className="container mx-auto flex flex-col md:flex-row items-center justify-center">
           <div className="md:w-1/2 md:pr-4 lg:pr-8 flex justify-center items-center">
             <AnimatedContent>
               <div className="text-center md:text-left">
                 <h1 className="text-5xl font-bold mb-4 text-white ml-40">Marcone Silva de Brito</h1>
                 <p className="text-white ml-40 text-justify">
-                Olá ! Sou um entusiasta de tecnologia e estudante do curso de Sistemas de Informação. Minha jornada profissional começou como técnico de operações na BBTS, onde ganhei valiosa experiência na infraestrutura de TI. Atualmente, além da faculdade faço cursos extracurriculares, buscando aprimorar constantemente meu conhecimento e habilidades. Com uma paixão pelo Front-End, mergulhei de cabeça em estudos avançados, obtendo diversas certificações, incluindo aquelas que atestam minha proficiência em HTML, CSS e Javascript. Vamos criar algo incrível juntos!
+                  Olá! Sou um entusiasta de tecnologia e estudante do curso de Sistemas de Informação. Minha jornada profissional começou como técnico de operações na BBTS, onde ganhei valiosa experiência na infraestrutura de TI. Atualmente, além da faculdade faço cursos extracurriculares, buscando aprimorar constantemente meu conhecimento e habilidades. Com uma paixão pelo Front-End, mergulhei de cabeça em estudos avançados, obtendo diversas certificações, incluindo aquelas que atestam minha proficiência em HTML, CSS e Javascript. Vamos criar algo incrível juntos!
+                  <button onClick={handleDownload} className="block bg-purple-500 hover:bg-blue-700 w-32 text-white font-bold py-2 px-4 rounded">
+                    Download CV
+                  </button>
                 </p>
               </div>
             </AnimatedContent>
           </div>
-          <div className="md:w-1/2 mt-4 md:mt-0 flex justify-center items-center ">
+          <div className="md:w-1/2 mt-4 md:mt-0 flex justify-center items-center">
             <AnimatedContent>
               <BannerImage
                 src={FotoMarcone}
-                alt="Descrição da imagem" className='rounded-xl'
+                alt="Descrição da imagem"
+                className="rounded-xl"
               />
             </AnimatedContent>
           </div>
         </div>
         <AnimatedGradient />
       </BannerSection>
-     
-    </body>
+    </div>
   );
 };
 
