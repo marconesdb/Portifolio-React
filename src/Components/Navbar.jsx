@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
 import Logomarca from '../assets/img/Logomarca.png';
-import '../Components/Navbar.css'
+import '../Components/Navbar.css';
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -52,42 +52,40 @@ const Navbar = () => {
           </div>
           {/* Desktop Menu Items */}
           <div className="hidden md:flex md:items-center">
-            <Link
-              to="/"
+            <a
+              href="#inicio"
               className="text-white px-3 py-2 rounded-md text-sm font-medium border-b border-transparent hover:border-orange400 hover:text-gray-500 transition duration-300"
             >
               Início
-            </Link>
+            </a>
 
-            <Link
-              to="/sobremim"
+            <a
+              href="#sobremim"
               className="text-white px-3 py-2 rounded-md text-sm font-medium border-b border-transparent hover:border-orange400 hover:text-gray-500 transition duration-300"
             >
              Sobre mim
-            </Link>
+            </a>
 
-            <Link
-              to="/projetos"
+            <a
+              href="#projetos"
               className="text-white px-3 py-2 rounded-md text-sm font-medium border-b border-transparent hover:border-orange400 hover:text-gray-500 transition duration-300"
             >
               Projetos
-            </Link>
+            </a>
 
-            <Link
-              to="/skills"
+            <a
+              href="#skills"
               className="text-white px-3 py-2 rounded-md text-sm font-medium border-b border-transparent hover:border-orange400 hover:text-gray-500 transition duration-300"
             >
               Skills
-            </Link>
+            </a>
 
-            <Link
-              to="/contato"
+            <a
+              href="#contato"
               className="text-white px-3 py-2 rounded-md text-sm font-medium border-b border-transparent hover:border-orange400 hover:text-gray-500 transition duration-300"
             >
              Contato
-            </Link>
-
-            
+            </a>
           </div>
         </div>
       </div>
@@ -95,42 +93,36 @@ const Navbar = () => {
       {isOpen && (
         <div className="md:hidden absolute top-24 left-0 w-full bg-white z-20">
           <div className="px-2 pt-2 pb-3 space-y-1">
-            <Link
-              to="/"
+            <a
+              href="#inicio"
               className="text-black hover:bg-orange400 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
             >
               Início
-            </Link>
-            <Link
-              to="/nossahistoria"
+            </a>
+            <a
+              href="#sobre-mim"
               className="text-black hover:bg-orange400 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
             >
-              Quem Somos
-            </Link>
-            <Link
-              to="/doutrinaespirita"
+              Sobre mim
+            </a>
+            <a
+              href="#projetos"
               className="text-black hover:bg-orange400 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
             >
-              Doutrina Espírita
-            </Link>
-            <Link
-              to="/transmissao"
+              Projetos
+            </a>
+            <a
+              href="#skills"
               className="text-black hover:bg-orange400 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
             >
-              Transmissões Online
-            </Link>
-            <Link
-              to="/doacoes"
-              className="text-black hover:bg-orange400 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-            >
-              Doações
-            </Link>
-            <Link
-              to="/contato"
+              Skills
+            </a>
+            <a
+              href="#contato"
               className="text-black hover:bg-orange400 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
             >
               Contato
-            </Link>
+            </a>
           </div>
         </div>
       )}
@@ -139,4 +131,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-

@@ -5,9 +5,8 @@ import BookListApp from '../assets/img/BookListApp.png';
 import CalculadoraCientífica from '../assets/img/Calculadora Científica.png';
 import TrabalhadoresDaUltimaHora from '../assets/img/Trabalhadores da Última Hora.png';
 import NovoProjetoImg from '../assets/img/Trabalhadores da Última Hora.png';
-import { Link } from 'react-router-dom';
 import Avatar from '../assets/img/avatar2.png';
-
+import downloadPDF from '../assets/img/Doc1.pdf'
 
 const ProjectCard = ({ imageUrl, title, description, link, onCardClick }) => {
   return (
@@ -83,6 +82,11 @@ export default function Projetos() {
     <div id="3" className="min-h-screen bg-gradient-to-r from-black via-indigo-900 to-black bg-fixed flex flex-col justify-center items-center">
       <div className="w-full max-w-screen-lg px-4">
         <h1 className="text-3xl font-bold mt-4 mb-8 text-center text-white">Projetos</h1>
+        <a href={downloadPDF} download="Example-PDF-document"
+                  target="_blank" className="block bg-purple-500 hover:bg-blue-700 w-32 text-white font-bold py-2 px-4 rounded"><button>Download CV</button> 
+          </a>
+
+
         <div className="flex justify-center">
           <img className="w-36 h-36 rounded-xl" src={Avatar} alt="" />
         </div>

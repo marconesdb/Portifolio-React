@@ -25,6 +25,7 @@ export default function Contato() {
   return (
     <div className="bg-gradient-to-r from-black via-slate-700 to-black bg-opacity-50 h-screen flex justify-center items-center ">
       <div className="container mx-auto ml-4 mr-4">
+       
         <form className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4" onSubmit={handleSubmit}>
           <div className="mb-4">
             <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="name">
@@ -90,6 +91,10 @@ export default function Contato() {
             </button>
           </div>
         </form>
+         {/* Âncora para voltar para o topo */}
+         <a href="#" className="fixed bottom-4 right-4 text-white text-sm py-2 px-4 bg-blue-500 rounded-lg shadow-md hover:bg-blue-700">
+          Voltar para o topo
+        </a>
       </div>
     </div>
   );

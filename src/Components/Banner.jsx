@@ -1,24 +1,30 @@
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
 import FotoMarcone from '../assets/img/fotor-202401108231.png';
-import downloadPDF from  '../assets/img/daeonline.pdf'
 
 const fadeIn = keyframes`
-  from {
+  0% {
     opacity: 0;
     transform: translateY(20px);
   }
-  to {
+  50% {
+    opacity: .5;
+    transform: translateY(-10px);
+  }
+  100% {
     opacity: 1;
     transform: translateY(0);
   }
 `;
 
 const gradientFadeIn = keyframes`
-  from {
+  0% {
     opacity: 0;
   }
-  to {
+  50% {
+    opacity: 1.5;
+  }
+  100% {
     opacity: 0.1;
   }
 `;
@@ -34,7 +40,7 @@ const BannerSection = styled.section`
 `;
 
 const AnimatedContent = styled.div`
-  animation: ${fadeIn} 8s ease-in-out;
+  animation: ${fadeIn} 10s ease-in-out;
 `;
 
 const AnimatedGradient = styled.div`
@@ -45,7 +51,7 @@ const AnimatedGradient = styled.div`
   height: 100%;
   background: linear-gradient(to right, black, #6f42c1, gray);
   opacity: 0;
-  animation: ${gradientFadeIn} 8s ease-in-out;
+  animation: ${gradientFadeIn} 3s ease-in-out;
 `;
 
 const BannerImage = styled.img`
@@ -54,11 +60,9 @@ const BannerImage = styled.img`
 `;
 
 const Banner = () => {
-
-
   return (
     <div className="mt-24">
-      <BannerSection id="1">
+      <BannerSection id="sobre-mim">
         <div className="container mx-auto flex flex-col md:flex-row items-center justify-center">
           <div className="md:w-1/2 md:pr-4 lg:pr-8 flex justify-center items-center">
             <AnimatedContent>
@@ -66,11 +70,7 @@ const Banner = () => {
                 <h1 className="text-5xl font-bold mb-4 text-white ml-40">Marcone Silva de Brito</h1>
                 <p className="text-white ml-40 text-justify">
                   Olá! Sou um entusiasta de tecnologia e estudante do curso de Sistemas de Informação. Minha jornada profissional começou como técnico de operações na BBTS, onde ganhei valiosa experiência na infraestrutura de TI. Atualmente, além da faculdade faço cursos extracurriculares, buscando aprimorar constantemente meu conhecimento e habilidades. Com uma paixão pelo Front-End, mergulhei de cabeça em estudos avançados, obtendo diversas certificações, incluindo aquelas que atestam minha proficiência em HTML, CSS e Javascript. Vamos criar algo incrível juntos!
-                  <a href={downloadPDF} download="Example-PDF-document"
-                  target="_blank" className="block bg-purple-500 hover:bg-blue-700 w-32 text-white font-bold py-2 px-4 rounded"><button>Download CV</button> 
-                  </a>
                 </p>
-                
               </div>
             </AnimatedContent>
           </div>
