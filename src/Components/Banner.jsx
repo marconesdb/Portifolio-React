@@ -1,6 +1,6 @@
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
-import FotoMarcone from '../assets/img/fotor-202401108231.png';
+import FotoMarcone from '../assets/img/fotor-20240412185333.png';
 
 const fadeIn = keyframes`
   0% {

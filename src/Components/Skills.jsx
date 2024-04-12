@@ -11,7 +11,7 @@ export default function Skills() {
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 8.5 }}
-        className="border border-gray-300 p-8 mt-8 mb-8 ml-8 mr-8"
+        className="p-8 ml-8 mr-8"
       >
         <h2 className="text-3xl font-bold text-center text-black mb-4 ">Skills</h2>
         <div className="flex flex-wrap justify-center">
@@ -19,63 +19,63 @@ export default function Skills() {
           <motion.div
             whileHover={{ rotateY: 180 }}
             transition={{ duration: 0.5 }}
-            className="text-5xl m-2 text-red-500"
+            className="text-9xl m-2 text-red-500"
           >
             <FaHtml5 title="HTML5" />
           </motion.div>
           <motion.div
             whileHover={{ rotateY: 180 }}
             transition={{ duration: 0.5 }}
-            className="text-5xl m-2 text-blue-500"
+            className="text-9xl m-2 text-blue-500"
           >
             <FaCss3Alt title="CSS3" />
           </motion.div>
           <motion.div
             whileHover={{ rotateY: 180 }}
             transition={{ duration: 0.5 }}
-            className="text-5xl m-2 text-yellow-500"
+            className="text-9xl m-2 text-yellow-500"
           >
             <FaJsSquare title="JavaScript" />
           </motion.div>
           <motion.div
             whileHover={{ rotateY: 180 }}
             transition={{ duration: 0.5 }}
-            className="text-5xl m-2 text-blue-400"
+            className="text-9xl m-2 text-blue-400"
           >
             <FaReact title="React" />
           </motion.div>
           <motion.div
             whileHover={{ rotateY: 180 }}
             transition={{ duration: 0.5 }}
-            className="text-5xl m-2 text-teal-500" // Alteração aqui para incluir a cor do Tailwind CSS
+            className="text-9xl m-2 text-teal-500" // Alteração aqui para incluir a cor do Tailwind CSS
           >
             <SiTailwindcss title="Tailwind CSS" />
           </motion.div>
           <motion.div
             whileHover={{ rotateY: 180 }}
             transition={{ duration: 0.5 }}
-            className="text-5xl m-2 text-purple-600"
+            className="text-9xl m-2 text-purple-600"
           >
             <FaBootstrap title="Bootstrap" />
           </motion.div>
           <motion.div
             whileHover={{ rotateY: 180 }}
             transition={{ duration: 0.5 }}
-            className="text-5xl m-2 text-gray-600"
+            className="text-9xl m-2 text-gray-600"
           >
             <FaGithub title="GitHub" />
           </motion.div>
           <motion.div
             whileHover={{ rotateY: 180 }}
             transition={{ duration: 0.5 }}
-            className="text-5xl m-2 text-blue-600"
+            className="text-9xl m-2 text-blue-600"
           >
             <SiTypescript title="TypeScript" />
           </motion.div>
           <motion.div
             whileHover={{ rotateY: 180 }}
             transition={{ duration: 0.5 }}
-            className="text-5xl m-2 text-green-600"
+            className="text-9xl m-2 text-green-600"
           >
             <FaNodeJs title="Node.js" />
           </motion.div>
