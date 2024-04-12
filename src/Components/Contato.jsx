@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 export default function Contato() {
   const [formData, setFormData] = useState({
@@ -8,25 +8,21 @@ export default function Contato() {
     message: ''
   });
 
-  const handleChange = e => {
-    const { name, value } = e.target;
-    setFormData(prevState => ({
-      ...prevState,
-      [name]: value
-    }));
-  };
+ 
+  
 
-  const handleSubmit = e => {
-    e.preventDefault();
-    // Aqui você pode adicionar a lógica para enviar o formulário
-    console.log(formData);
-  };
+  useEffect(() => {
+    const formElement = document.getElementById('form');
+    if (formElement) {
+      formElement.scrollIntoView({ behavior: 'smooth' });
+    }
+  }, []);
 
   return (
-    <div className="bg-gradient-to-r from-black via-slate-700 to-black bg-opacity-50 h-screen flex justify-center items-center ">
-      <div className="container mx-auto ml-4 mr-4">
-       
-        <form className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4" onSubmit={handleSubmit}>
+    <div className="bg-gradient-to-r from-black via-slate-700 to-black bg-opacity-50 h-screen flex justify-center items-center">
+      <div className="container mx-auto ml-4 mr-4 max-w-md" id=""> {/* Adicionando id="form" */}
+       <h1 className='text-center mb-4 text-3xl font-bold  text-amber-400 '>Fale Comigo</h1>
+        <form className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 transform transition-transform duration-300 hover:scale-105" action="https://formsubmit.co/df3edde0e58c921f466da54d846b184a" method="POST">
           <div className="mb-4">
             <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="name">
               Nome
@@ -37,9 +33,7 @@ export default function Contato() {
               type="text"
               placeholder="Seu nome"
               name="name"
-              value={formData.name}
-              onChange={handleChange}
-            />
+              required/>
           </div>
           <div className="mb-4">
             <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="email">
@@ -51,9 +45,7 @@ export default function Contato() {
               type="email"
               placeholder="Seu email"
               name="email"
-              value={formData.email}
-              onChange={handleChange}
-            />
+              required/>
           </div>
           <div className="mb-4">
             <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="phone">
@@ -65,9 +57,7 @@ export default function Contato() {
               type="text"
               placeholder="Seu telefone"
               name="phone"
-              value={formData.phone}
-              onChange={handleChange}
-            />
+              required/>
           </div>
           <div className="mb-4">
             <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="message">
@@ -78,17 +68,17 @@ export default function Contato() {
               id="message"
               placeholder="Sua mensagem"
               name="message"
-              value={formData.message}
-              onChange={handleChange}
-            ></textarea>
+              required></textarea>
           </div>
           <div className="flex items-center justify-between">
+          
             <button
               className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
               type="submit"
             >
               Enviar
             </button>
+            <input type="hidden" name="_next" value="https://yourdomain.co/thanks.html"></input>
           </div>
         </form>
          {/* Âncora para voltar para o topo */}

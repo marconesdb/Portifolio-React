@@ -3,6 +3,7 @@ import Footer from './Components/Footer'
 import Projetos from './Components/Projetos'
 import Skills from './Components/Skills'
 import Banner from './Components/Banner'
+import Banner2 from './Components/Banner2'
 import Contato from './Components/Contato'
 function App() {
   
@@ -11,6 +12,7 @@ function App() {
     <>
     <Navbar/>
     <Banner/>
+    <Banner2/>
     <Projetos/>
     <Skills/>
     <Contato/>

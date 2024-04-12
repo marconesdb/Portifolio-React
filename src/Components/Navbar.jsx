@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Logomarca from '../assets/img/Logomarca.png';
+import Logomarca from '../assets/img/img-logo.png';
 import '../Components/Navbar.css';
 
 const Navbar = () => {
@@ -14,7 +14,7 @@ const Navbar = () => {
       <div className="container mx-auto px-2 md:px-4">
         <div className="flex justify-between items-center h-24">
           {/* Logo */}
-          <div className="flex items-center w-16 h-10">
+          <div className="flex items-center w-20 h-8">
             <img src={Logomarca} alt="Logo" className="h-20 rounded" />
           </div>
           {/* Mobile Menu Icon */}
@@ -118,7 +118,7 @@ const Navbar = () => {
               Skills
             </a>
             <a
-              href="#contato"
+              href=""
               className="text-black hover:bg-orange400 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
             >
               Contato

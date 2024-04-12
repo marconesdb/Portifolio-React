@@ -6,14 +6,14 @@ import { SiTypescript, SiTailwindcss } from 'react-icons/si'; // Adicionando o �
 
 export default function Skills() {
   return (
-    <div>
+    <div id="" className='bg-amber-500'>
       <motion.section
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 8.5 }}
         className="border border-gray-300 p-8 mt-8 mb-8 ml-8 mr-8"
       >
-        <h2 className="text-2xl mb-4 text-center">Skills</h2>
+        <h2 className="text-3xl font-bold text-center text-black mb-4 ">Skills</h2>
         <div className="flex flex-wrap justify-center">
           {/* Utilize o componente motion para adicionar animações */}
           <motion.div

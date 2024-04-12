@@ -1,107 +1,98 @@
-import React, { useState } from 'react';
-import { Flipper } from "react-flip-toolkit";
+import React from 'react';
+import { Flipper, Flipped } from 'react-flip-toolkit';
 import { motion } from 'framer-motion';
-import BookListApp from '../assets/img/BookListApp.png';
-import CalculadoraCientífica from '../assets/img/Calculadora Científica.png';
-import TrabalhadoresDaUltimaHora from '../assets/img/Trabalhadores da Última Hora.png';
-import NovoProjetoImg from '../assets/img/Trabalhadores da Última Hora.png';
+import karinaCevalles from '../assets/img/KarinaCevalles.png';
+import lacosdeamor from '../assets/img/lacosdeamor-2.png';
+import TrabalhadoresDaUltimaHora from '../assets/img/trabalhadoresdaultimahora.png';
+import solardejesus from '../assets/img/solardejeus-2.png';
 import Avatar from '../assets/img/avatar2.png';
-import downloadPDF from '../assets/img/Doc1.pdf'
+import downloadPDF from '../assets/img/Doc1.pdf';
+import '../Components/Projetos/Projetos.css';
 
-const ProjectCard = ({ imageUrl, title, description, link, onCardClick }) => {
+const ProjectCard = ({ imageUrl, title, description, link }) => {
+  const handleCardClick = (event) => {
+    // Verifica se o clique foi no link
+    if (event.target.tagName !== 'A') {
+      window.open(link, '_blank'); // Abre o link em uma nova aba
+    }
+  };
+
   return (
     <Flipper flipKey={link}>
-      <motion.div 
-        className="relative block overflow-hidden rounded-lg shadow-md"
-        whileHover={{ scale: 1.05 }}
-        transition={{ duration: 0.3 }}
-        onClick={() => onCardClick(imageUrl)}
-        style={{ cursor: 'pointer' }} // Adicionando o cursor pointer aqui
-      >
-        <img src={imageUrl} alt={title} className="object-cover w-full h-48 sm:h-56 md:h-64 lg:h-72 xl:h-80" />
-        <div className="absolute inset-0 bg-black opacity-0 hover:opacity-50 transition-opacity duration-300 flex items-center justify-center">
-          <h2 className="text-white text-lg font-semibold">{title}</h2>
-        </div>
-        <div className="absolute inset-x-0 bottom-0 px-4 py-2 bg-white bg-opacity-75">
-          <p className="text-gray-800 text-sm">{description}</p>
-        </div>
-      </motion.div>
+      <Flipped flipId={`project-${link}`}>
+        <motion.div
+          className="relative block overflow-hidden rounded-lg shadow-md project-card"
+          whileHover={{ scale: 1.05 }}
+          transition={{ duration: 0.3 }}
+          onClick={handleCardClick}
+          style={{ cursor: 'pointer' }}
+        >
+          <img src={imageUrl} alt={title} className="object-cover w-full h-48 sm:h-56 md:h-64 lg:h-72 xl:h-80" />
+          <div className="absolute inset-0 bg-black opacity-0 hover:opacity-50 transition-opacity duration-300 flex items-center justify-center">
+            <h2 className="text-white text-lg font-semibold">{title}</h2>
+          </div>
+          <div className="absolute inset-x-0 bottom-0 px-4 py-2 bg-white bg-opacity-75">
+            <p className="text-gray-800 text-sm">{description}</p>
+          </div>
+        </motion.div>
+      </Flipped>
     </Flipper>
   );
 };
 
-const ProjectList = ({ projects, onCardClick }) => {
+const ProjectList = ({ projects }) => {
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 justify-center mt-4">
+    <div id="" className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 justify-center mt-4 ">
       {projects.map((project, index) => (
-        <ProjectCard key={index} {...project} onCardClick={onCardClick} />
+        <ProjectCard key={index} {...project} />
       ))}
     </div>
   );
 };
 
 export default function Projetos() {
-  const [modalImageUrl, setModalImageUrl] = useState(null);
-
-  const handleCardClick = (imageUrl) => {
-    setModalImageUrl(imageUrl);
-  };
-
-  const closeModal = () => {
-    setModalImageUrl(null);
-  };
-
   const projects = [
     {
-      imageUrl: BookListApp,
+      imageUrl: karinaCevalles,
       title: '',
-      description: 'This is a description of Book List App.',
-      link: 'https://example.com/book-list-app',
+      description: 'Site desenvolvido para a Advogada karina Cevalles.',
+      link: 'https://github.com/marconesdb/site-karinaCevalles',
     },
     {
-      imageUrl: CalculadoraCientífica,
+      imageUrl: lacosdeamor,
       title: '',
-      description: 'This is a description of Calculadora Científica.',
-      link: 'https://example.com/calculadora-cientifica',
+      description: 'Site da Instituição Filantrópica Laços de Amor',
+      link: 'https://github.com/marconesdb/site-lacosdeamor',
     },
     {
       imageUrl: TrabalhadoresDaUltimaHora,
       title: '',
-      description: 'This is a description of Trabalhadores da Última Hora.',
-      link: 'https://example.com/trabalhadores-ultima-hora',
+      description: 'Site da Instituição de Caridade Trabalhadores da Última Hora.',
+      link: 'https://github.com/marconesdb/SiteTrabalhadoresDaUltimaHora',
     },
     {
-      imageUrl: NovoProjetoImg,
+      imageUrl: solardejesus,
       title: '',
-      description: 'This is a description of Novo Projeto.',
-      link: 'https://example.com/novo-projeto',
+      description: 'Site da Instituição Religiosa Solar de Jesus',
+      link: 'https://github.com/marconesdb/solarDeJesus-React',
     },
   ];
 
   return (
-    <div id="3" className="min-h-screen bg-gradient-to-r from-black via-indigo-900 to-black bg-fixed flex flex-col justify-center items-center">
+    <div id="" className="p-24 bg-gradient-to-r from-black via-indigo-900 to-black bg-fixed flex flex-col justify-center items-center">
       <div className="w-full max-w-screen-lg px-4">
-        <h1 className="text-3xl font-bold mt-4 mb-8 text-center text-white">Projetos</h1>
-        <a href={downloadPDF} download="Example-PDF-document"
-                  target="_blank" className="block bg-purple-500 hover:bg-blue-700 w-32 text-white font-bold py-2 px-4 rounded"><button>Download CV</button> 
-          </a>
-
+        <h1 className="text-3xl font-bold mt-4 mb-8 text-center text-amber-400">Projetos</h1>
+        <a href={downloadPDF} download="Example-PDF-document" target="_blank" className="block bg-purple-500 hover:bg-blue-700 w-32 font-bold py-2 px-4 rounded text-amber-400">
+          Download CV
+        </a>
 
         <div className="flex justify-center">
           <img className="w-36 h-36 rounded-xl" src={Avatar} alt="" />
         </div>
         <div className="mx-auto mb-4">
-          <ProjectList projects={projects} onCardClick={handleCardClick} />
+          <ProjectList projects={projects} />
         </div>
       </div>
-      {modalImageUrl && (
-        <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-gray-900 bg-opacity-50">
-          <div className="relative max-w-2xl max-h-2xl">
-            <button onClick={closeModal} className="absolute top-0 right-0 mt-4 mr-4 px-2 py-1 bg-gray-900 text-white rounded">Fechar</button>
-            <img src={modalImageUrl} alt="Imagem do Projeto" className="w-full h-full object-contain" />
-          </div>
-        </div>
-      )}
     </div>
   );
 }

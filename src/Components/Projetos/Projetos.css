@@ -1,0 +1,6 @@
+.project-card {
+  border: 1px solid rgba(255, 255, 255, 0.5); /* Cor e espessura da borda */
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Cria o efeito de relevo */
+}
+
+

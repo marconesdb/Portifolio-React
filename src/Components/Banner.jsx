@@ -61,15 +61,15 @@ const BannerImage = styled.img`
 
 const Banner = () => {
   return (
-    <div className="mt-24">
+    <div className="mt-24" id="">
       <BannerSection id="sobre-mim">
         <div className="container mx-auto flex flex-col md:flex-row items-center justify-center">
           <div className="md:w-1/2 md:pr-4 lg:pr-8 flex justify-center items-center">
             <AnimatedContent>
               <div className="text-center md:text-left">
-                <h1 className="text-5xl font-bold mb-4 text-white ml-40">Marcone Silva de Brito</h1>
-                <p className="text-white ml-40 text-justify">
-                  Olá! Sou um entusiasta de tecnologia e estudante do curso de Sistemas de Informação. Minha jornada profissional começou como técnico de operações na BBTS, onde ganhei valiosa experiência na infraestrutura de TI. Atualmente, além da faculdade faço cursos extracurriculares, buscando aprimorar constantemente meu conhecimento e habilidades. Com uma paixão pelo Front-End, mergulhei de cabeça em estudos avançados, obtendo diversas certificações, incluindo aquelas que atestam minha proficiência em HTML, CSS e Javascript. Vamos criar algo incrível juntos!
+                <h1 className="text-5xl font-bold mb-4 text-amber-400 ml-40">Marcone Silva de Brito</h1>
+                <p className="text-white ml-40 text-justify text-orange-30 text-2xl">
+                 Front-End Developer 
                 </p>
               </div>
             </AnimatedContent>
