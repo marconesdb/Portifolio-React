@@ -47,7 +47,7 @@ const Banner2 = () => {
       <div className="container mx-auto py-10 flex flex-col md:flex-row items-center justify-center">
         <div className="md:w-full md:pr-4 lg:pr-8 flex justify-center items-center">
           <div className="text-white text-justify text-xl md:ml-56 ml-4 mr-4 mt-36  mb-36" ref={ref}>
-            <h3 className=" font-bold mb-4 text-3xl text-amber-400 ">Sobre mim</h3>
+            <h3 className=" font-bold mb-4 text-3xl text-amber-400 pt-4">Sobre mim</h3>
             {text}
           </div>
         </div>

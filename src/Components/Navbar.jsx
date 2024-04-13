@@ -94,32 +94,32 @@ const Navbar = () => {
         <div className="md:hidden absolute top-24 left-0 w-full bg-white z-20">
           <div className="px-2 pt-2 pb-3 space-y-1">
             <a
-              href="#inicio"
-              className="text-black hover:bg-orange400 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+              href="#banner"
+              className="text-black hover:bg-orange400 hover:text-amber-600 block px-3 py-2 rounded-md text-base font-medium"
             >
               Início
             </a>
             <a
-              href="#sobre-mim"
-              className="text-black hover:bg-orange400 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+              href="#sobre"
+              className="text-black hover:bg-orange400 hover:text-amber-600 block px-3 py-2 rounded-md text-base font-medium"
             >
               Sobre mim
             </a>
             <a
               href="#projetos"
-              className="text-black hover:bg-orange400 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+              className="text-black hover:bg-orange400 hover:text-amber-600 block px-3 py-2 rounded-md text-base font-medium"
             >
               Projetos
             </a>
             <a
               href="#skills"
-              className="text-black hover:bg-orange400 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+              className="text-black hover:bg-orange400 hover:text-amber-600 block px-3 py-2 rounded-md text-base font-medium"
             >
               Skills
             </a>
             <a
-              href=""
-              className="text-black hover:bg-orange400 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+              href="#contato"
+              className="text-black hover:bg-orange400 hover:text-amber-600 block px-3 py-2 rounded-md text-base font-medium"
             >
               Contato
             </a>
