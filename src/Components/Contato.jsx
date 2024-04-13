@@ -78,7 +78,7 @@ export default function Contato() {
             >
               Enviar
             </button>
-            <input type="hidden" name="_next" value="https://yourdomain.co/thanks.html"></input>
+            <input type="hidden" name="_next" value="https://marconesdb.github.io/msg-email-ok/"></input>
           </div>
         </form>
          {/* Âncora para voltar para o topo */}
