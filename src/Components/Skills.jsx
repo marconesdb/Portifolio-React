@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { FaHtml5, FaCss3Alt, FaJsSquare, FaReact, FaBootstrap, FaGithub, FaNodeJs } from 'react-icons/fa';
-import { SiTypescript, SiTailwindcss } from 'react-icons/si'; 
+import { SiTypescript, SiTailwindcss } from 'react-icons/si';
 
 export default function Skills() {
   const [isVisible, setIsVisible] = useState(false);
@@ -20,76 +20,76 @@ export default function Skills() {
   }, []);
 
   return (
-    <div id="skills" className='bg-amber-500 h-screen'>
+    <div id="skills" className='bg-amber-500 min-h-screen'>
       {isVisible && (
         <motion.section
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 20 }}
-          className="p-8 ml-8 mr-8"
+          transition={{ duration: 5 }}
+          className="p-8 md:p-16 flex justify-center flex-col items-center"
         >
-          <h2 className="text-3xl font-bold text-center text-black mt-32 mb-40 ">Skills</h2>
+          <h2 className="text-3xl font-bold text-center text-black mt-20 mb-40">Skills</h2>
           <div className="flex flex-wrap justify-center">
             <motion.div
               whileHover={{ rotateY: 180 }}
               transition={{ duration: 0.9 }}
-              className="text-9xl m-2 text-red-500"
+              className="text-6xl md:text-9xl text-red-500 m-2"
             >
               <FaHtml5 title="HTML5" />
             </motion.div>
             <motion.div
               whileHover={{ rotateY: 180 }}
               transition={{ duration: 0.9 }}
-              className="text-9xl m-2 text-blue-500"
+              className="text-6xl md:text-9xl text-blue-500 m-2"
             >
               <FaCss3Alt title="CSS3" />
             </motion.div>
             <motion.div
               whileHover={{ rotateY: 180 }}
               transition={{ duration: 0.9 }}
-              className="text-9xl m-2 text-yellow-500"
+              className="text-6xl md:text-9xl text-yellow-500 m-2"
             >
               <FaJsSquare title="JavaScript" />
             </motion.div>
             <motion.div
               whileHover={{ rotateY: 180 }}
               transition={{ duration: 0.9 }}
-              className="text-9xl m-2 text-blue-400"
+              className="text-6xl md:text-9xl text-blue-400 m-2"
             >
               <FaReact title="React" />
             </motion.div>
             <motion.div
               whileHover={{ rotateY: 180 }}
               transition={{ duration: 0.9 }}
-              className="text-9xl m-2 text-teal-500"
+              className="text-6xl md:text-9xl text-teal-500 m-2"
             >
               <SiTailwindcss title="Tailwind CSS" />
             </motion.div>
             <motion.div
               whileHover={{ rotateY: 180 }}
               transition={{ duration: 0.9 }}
-              className="text-9xl m-2 text-purple-600"
+              className="text-6xl md:text-9xl text-purple-600 m-2"
             >
               <FaBootstrap title="Bootstrap" />
             </motion.div>
             <motion.div
               whileHover={{ rotateY: 180 }}
               transition={{ duration: 0.9 }}
-              className="text-9xl m-2 text-gray-600"
+              className="text-6xl md:text-9xl text-gray-600 m-2"
             >
               <FaGithub title="GitHub" />
             </motion.div>
             <motion.div
               whileHover={{ rotateY: 180 }}
               transition={{ duration: 0.9 }}
-              className="text-9xl m-2 text-blue-600"
+              className="text-6xl md:text-9xl text-blue-600 m-2"
             >
               <SiTypescript title="TypeScript" />
             </motion.div>
             <motion.div
               whileHover={{ rotateY: 180 }}
               transition={{ duration: 0.9 }}
-              className="text-9xl m-2 text-green-600"
+              className="text-6xl md:text-9xl text-green-600 m-2"
             >
               <FaNodeJs title="Node.js" />
             </motion.div>
