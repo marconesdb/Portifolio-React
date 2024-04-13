@@ -3,7 +3,7 @@ import { FaWhatsapp, FaGithub, FaLinkedin } from 'react-icons/fa';
 import logo from '../assets/img/Logomarca2.png'
 const Footer = () => {
   return (
-    <footer className="bg-gray-800 text-white py-6">
+    <footer  className="bg-gray-800 text-white py-6">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="text-center md:text-left mb-4 md:mb-0">

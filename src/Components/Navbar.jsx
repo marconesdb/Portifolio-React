@@ -53,36 +53,36 @@ const Navbar = () => {
           {/* Desktop Menu Items */}
           <div className="hidden md:flex md:items-center">
             <a
-              href="#inicio"
-              className="text-white px-3 py-2 rounded-md text-sm font-medium border-b border-transparent hover:border-orange400 hover:text-gray-500 transition duration-300"
+              href="#banner"
+              className="text-white px-3 py-2 rounded-md text-sm  border-b hover:border-yellow-400 border-transparent hover:border-orange400 hover:text-gray-500 transition duration-300 font-bold"
             >
               Início
             </a>
 
             <a
-              href="#sobremim"
-              className="text-white px-3 py-2 rounded-md text-sm font-medium border-b border-transparent hover:border-orange400 hover:text-gray-500 transition duration-300"
+              href="#sobre"
+              className="text-white px-3 py-2 rounded-md text-sm font-bold border-b hover:border-yellow-400 border-transparent hover:border-orange400 hover:text-gray-500 transition duration-300"
             >
              Sobre mim
             </a>
 
             <a
               href="#projetos"
-              className="text-white px-3 py-2 rounded-md text-sm font-medium border-b border-transparent hover:border-orange400 hover:text-gray-500 transition duration-300"
+              className="text-white px-3 py-2 rounded-md text-sm font-bold border-b border-transparent hover:border-yellow-400 hover:border-orange400 hover:text-gray-500 transition duration-300"
             >
               Projetos
             </a>
 
             <a
               href="#skills"
-              className="text-white px-3 py-2 rounded-md text-sm font-medium border-b border-transparent hover:border-orange400 hover:text-gray-500 transition duration-300"
+              className="text-white px-3 py-2 rounded-md text-sm font-bold border-b hover:border-yellow-400 border-transparent hover:border-orange400 hover:text-gray-500 transition duration-300"
             >
               Skills
             </a>
 
             <a
               href="#contato"
-              className="text-white px-3 py-2 rounded-md text-sm font-medium border-b border-transparent hover:border-orange400 hover:text-gray-500 transition duration-300"
+              className="text-white px-3 py-2 rounded-md text-sm font-bold border-b border-transparent hover:border-orange400 hover:text-gray-500 transition hover:border-yellow-400 duration-300"
             >
              Contato
             </a>

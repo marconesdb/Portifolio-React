@@ -7,13 +7,18 @@ import TrabalhadoresDaUltimaHora from '../assets/img/trabalhadoresdaultimahora.p
 import solardejesus from '../assets/img/solardejeus-2.png';
 import Avatar from '../assets/img/avatar2.png';
 import downloadPDF from '../assets/img/Doc1.pdf';
-import '../Components/Projetos/Projetos.css';
+import '../Components/Projetos/Projetos.css'; // Adicionei a importação do arquivo CSS
+import { useInView } from 'react-intersection-observer';
 
-const ProjectCard = ({ imageUrl, title, description, link }) => {
+const ProjectCard = ({ imageUrl, title, description, link, index }) => {
+  const { ref, inView } = useInView({
+    threshold: 0.5,
+    triggerOnce: true,
+  });
+
   const handleCardClick = (event) => {
-    // Verifica se o clique foi no link
     if (event.target.tagName !== 'A') {
-      window.open(link, '_blank'); // Abre o link em uma nova aba
+      window.open(link, '_blank');
     }
   };
 
@@ -21,11 +26,13 @@ const ProjectCard = ({ imageUrl, title, description, link }) => {
     <Flipper flipKey={link}>
       <Flipped flipId={`project-${link}`}>
         <motion.div
-          className="relative block overflow-hidden rounded-lg shadow-md project-card"
-          whileHover={{ scale: 1.05 }}
-          transition={{ duration: 0.3 }}
+          ref={ref}
+          className="relative block overflow-hidden rounded-lg  project-card border-2 border-gray-300"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 20 }}
+          transition={{ duration: 1, delay: index * 0.9 }}
           onClick={handleCardClick}
-          style={{ cursor: 'pointer' }}
+          
         >
           <img src={imageUrl} alt={title} className="object-cover w-full h-48 sm:h-56 md:h-64 lg:h-72 xl:h-80" />
           <div className="absolute inset-0 bg-black opacity-0 hover:opacity-50 transition-opacity duration-300 flex items-center justify-center">
@@ -44,7 +51,7 @@ const ProjectList = ({ projects }) => {
   return (
     <div id="" className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 justify-center mt-4 ">
       {projects.map((project, index) => (
-        <ProjectCard key={index} {...project} />
+        <ProjectCard key={index} {...project} index={index} />
       ))}
     </div>
   );
@@ -79,10 +86,10 @@ export default function Projetos() {
   ];
 
   return (
-    <div id="" className="p-24 bg-gradient-to-r from-black via-indigo-900 to-black bg-fixed flex flex-col justify-center items-center">
+    <div id="projetos" className="p-24 bg-gradient-to-r from-black via-indigo-900 to-black bg-fixed flex flex-col justify-center items-center">
       <div className="w-full max-w-screen-lg px-4">
         <h1 className="text-3xl font-bold mt-4 mb-8 text-center text-amber-400">Projetos</h1>
-        <a href={downloadPDF} download="Example-PDF-document" target="_blank" className="block bg-purple-500 hover:bg-blue-700 w-32 font-bold py-2 px-4 rounded text-amber-400">
+        <a href={downloadPDF} download="Example-PDF-document" target="_blank" className="block bg-blue-500 hover:bg-blue-700 w-32 font-bold py-2 px-4 rounded text-amber-400">
           Download CV
         </a>
 

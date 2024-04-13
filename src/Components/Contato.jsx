@@ -19,9 +19,9 @@ export default function Contato() {
   }, []);
 
   return (
-    <div className="bg-gradient-to-r from-black via-slate-700 to-black bg-opacity-50 h-screen flex justify-center items-center">
+    <div id='contato' className="bg-gradient-to-r from-black via-slate-700 to-black bg-opacity-50 h-screen flex justify-center items-center">
       <div className="container mx-auto ml-4 mr-4 max-w-md" id=""> {/* Adicionando id="form" */}
-       <h1 className='text-center mb-4 text-3xl font-bold  text-amber-400 '>Fale Comigo</h1>
+       <h1 className='text-center mt-28 mb-4 text-3xl font-bold  text-amber-400 '>Fale Comigo</h1>
         <form className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 transform transition-transform duration-300 hover:scale-105" action="https://formsubmit.co/df3edde0e58c921f466da54d846b184a" method="POST">
           <div className="mb-4">
             <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="name">
