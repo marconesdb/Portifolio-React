@@ -1,13 +1,13 @@
 import React from 'react';
 import { FaWhatsapp, FaGithub, FaLinkedin } from 'react-icons/fa';
-import logo from '../assets/img/Logomarca2.png'
+import logo from '../assets/img/MSB (4) (1).png'
 const Footer = () => {
   return (
     <footer  className="bg-gray-800 text-white py-6">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="text-center md:text-left mb-4 md:mb-0">
-            <p className="text-sm "><img src={logo} alt=""  className='rounded'/>© 2024 Seu Site. Todos os direitos reservados.</p>
+            <p className="text-sm "><img src={logo} alt=""  className='rounded h-16'/>© 2024 Seu Site. Todos os direitos reservados.</p>
           </div>
           <div className="flex justify-center md:justify-end items-center space-x-4">
             {/* WhatsApp */}

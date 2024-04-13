@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Logomarca from '../assets/img/img-logo.png';
+import Logomarca from '../assets/img/MSB (4) (1).png';
 import '../Components/Navbar.css';
 
 const Navbar = () => {
@@ -15,7 +15,7 @@ const Navbar = () => {
         <div className="flex justify-between items-center h-24">
           {/* Logo */}
           <div className="flex items-center w-20 h-8">
-            <img src={Logomarca} alt="Logo" className="h-20 rounded" />
+            <img src={Logomarca} alt="Logo" className="h-16 rounded" />
           </div>
           {/* Mobile Menu Icon */}
           <div className="md:hidden">

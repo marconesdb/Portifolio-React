@@ -27,7 +27,7 @@ const ProjectCard = ({ imageUrl, title, description, link, index }) => {
       <Flipped flipId={`project-${link}`}>
         <motion.div
           ref={ref}
-          className="relative block overflow-hidden rounded-lg  project-card border-2 border-gray-300"
+          className="relative block overflow-hidden rounded-lg   border-2 border-gray-300"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 20 }}
           transition={{ duration: 1, delay: index * 0.9 }}
