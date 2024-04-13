@@ -18,6 +18,7 @@ const Banner = () => {
             <div className="text-center md:text-left md:ml-40">
               <h1 className="text-5xl font-bold mb-4 text-amber-400">Marcone Silva de Brito</h1>
               <p className="text-white text-justify text-orange-30 text-2xl mb-8 mt-8">Front-End Developer</p>
+              <p className='text-yellow-600 text-justify text-orange-30 text-2xl mb-8 mt-8'><em>"Escrevo códigos e contribuo para transformar a Web com bytes de informação"</em></p>
               <a
                 href="https://wa.me/38992182727"
                 target="_blank"

@@ -95,7 +95,9 @@ export default function Projetos() {
 
         <div className="flex justify-center">
           <img className="w-36 h-36 rounded-xl" src={Avatar} alt="" />
+         
         </div>
+        <p className='text-yellow-600 text-justify flex justify-center text-orange-30 text-2xl mb-8 mt-8'><em>"Explore meus projetos e entre em contato para colaborações."</em></p>
         <div className="mx-auto mb-4">
           <ProjectList projects={projects} />
         </div>
