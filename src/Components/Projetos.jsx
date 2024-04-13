@@ -7,7 +7,7 @@ import TrabalhadoresDaUltimaHora from '../assets/img/trabalhadoresdaultimahora.p
 import solardejesus from '../assets/img/solardejeus-2.png';
 import Avatar from '../assets/img/avatar2.png';
 import downloadPDF from '../assets/img/Doc1.pdf';
-import '../Components/Projetos/Projetos.css'; // Adicionei a importação do arquivo CSS
+import '../Components/Projetos/Projetos.css';
 import { useInView } from 'react-intersection-observer';
 
 const ProjectCard = ({ imageUrl, title, description, link, index }) => {
@@ -27,12 +27,15 @@ const ProjectCard = ({ imageUrl, title, description, link, index }) => {
       <Flipped flipId={`project-${link}`}>
         <motion.div
           ref={ref}
-          className="relative block overflow-hidden rounded-lg   border-2 border-gray-300"
+          className="relative block overflow-hidden rounded-lg border-2 border-gray-300"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 20 }}
           transition={{ duration: 1, delay: index * 0.9 }}
           onClick={handleCardClick}
-          
+          style={{
+            width: '100%',
+            maxWidth: '300px', // Largura máxima para dispositivos móveis
+          }}
         >
           <img src={imageUrl} alt={title} className="object-cover w-full h-48 sm:h-56 md:h-64 lg:h-72 xl:h-80" />
           <div className="absolute inset-0 bg-black opacity-0 hover:opacity-50 transition-opacity duration-300 flex items-center justify-center">
@@ -49,7 +52,7 @@ const ProjectCard = ({ imageUrl, title, description, link, index }) => {
 
 const ProjectList = ({ projects }) => {
   return (
-    <div id="" className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 justify-center mt-4 ">
+    <div id="" className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 justify-center mt-4">
       {projects.map((project, index) => (
         <ProjectCard key={index} {...project} index={index} />
       ))}
@@ -95,9 +98,10 @@ export default function Projetos() {
 
         <div className="flex justify-center">
           <img className="w-36 h-36 rounded-xl" src={Avatar} alt="" />
-         
         </div>
-        <p className='text-yellow-600 text-justify flex justify-center text-orange-30 text-2xl mb-8 mt-8'><em>"Explore meus projetos e entre em contato para colaborações."</em></p>
+        <p className="text-yellow-600 text-justify flex justify-center text-orange-30 text-2xl mb-8 mt-8">
+          <em>"Explore meus projetos e entre em contato para colaborações."</em>
+        </p>
         <div className="mx-auto mb-4">
           <ProjectList projects={projects} />
         </div>
