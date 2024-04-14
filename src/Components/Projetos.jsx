@@ -42,9 +42,9 @@ const ProjectCard = ({ title, description, imageUrl, link, delay }) => {
   });
 
   return (
-    <motion.div
+    <motion.div 
       ref={ref}
-      className="shadow-xl rounded-lg overflow-hidden border-2 border-gray-300"
+      className="shadow-xl rounded-lg overflow-hidden border-2 border-gray-30 "
       initial={{ opacity: 0, x: -100 }}
       animate={{ opacity: inView ? 1 : 0, x: inView ? 0 : -100 }}
       transition={{ duration: 0.5, delay }}
@@ -62,7 +62,7 @@ const ProjectCard = ({ title, description, imageUrl, link, delay }) => {
 };
 
 const App = () => (
-  <div id="projetos" className=" mx-auto px-4 py-8 bg-gradient-to-r from-black via-indigo-900 to-black bg-fixed">
+  <div id="projetos"  className=" mx-auto px-4 py-8 bg-gradient-to-r from-black via-indigo-900 to-black bg-fixed">
     <h1 className="text-3xl font-bold text-center text-amber-400 mt-28">Projetos</h1>
     <div className="flex justify-start mb-8">
       <a href={Curriculo} download="Curriculo.pdf" target="_blank" className=" block bg-blue-500 hover:bg-blue-700 w-32 font-bold py-2 px-4 rounded text-amber-400">Download CV</a>
@@ -71,7 +71,7 @@ const App = () => (
       <img className="w-24 h-24" src={Avatar2} alt="Imagem de exemplo" />
       <p className='text-yellow-600 text-justify flex justify-center text-orange-30 text-2xl mb-8 mt-8 mr-8'><em>"Explore meus projetos e entre em contato para colaborações."</em></p>
     </div>
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-32">
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-32">
       {projects.map((project, index) => (
         <ProjectCard key={index} {...project} delay={index * 0.5} />
       ))}

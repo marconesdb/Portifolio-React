@@ -7,7 +7,7 @@ const Banner = () => {
   return (
     <div className="" id="banner">
       <motion.section
-        id="sobre-mim"
+        id="#"
         className="bg-gradient-to-r from-black via-[#6f42c1] to-black md:p-8 relative overflow-hidden mt-24 p-8"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
