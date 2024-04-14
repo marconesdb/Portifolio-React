@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { FaHtml5, FaCss3Alt, FaJsSquare, FaReact, FaBootstrap, FaGithub, FaNodeJs } from 'react-icons/fa';
+import { FaHtml5, FaCss3Alt, FaJsSquare, FaReact, FaBootstrap, FaGithub, FaNodeJs, FaPhp } from 'react-icons/fa';
 import { SiTypescript, SiTailwindcss } from 'react-icons/si';
 
 export default function Skills() {
@@ -30,6 +30,14 @@ export default function Skills() {
         >
           <h2 className="text-3xl font-bold text-center text-black mt-20 mb-40">Skills</h2>
           <div className="flex flex-wrap justify-center">
+            {/* Adicionando o ícone do PHP */}
+            <motion.div
+              whileHover={{ rotateY: 180 }}
+              transition={{ duration: 0.9 }}
+              className="text-6xl md:text-9xl text-indigo-500 m-2" // Alterado para indigo-500
+            >
+              <FaPhp title="PHP" />
+            </motion.div>
             <motion.div
               whileHover={{ rotateY: 180 }}
               transition={{ duration: 0.9 }}
