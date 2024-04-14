@@ -62,7 +62,7 @@ const ProjectCard = ({ title, description, imageUrl, link, delay }) => {
 };
 
 const App = () => (
-  <div className=" mx-auto px-4 py-8 bg-gradient-to-r from-black via-indigo-900 to-black bg-fixed">
+  <div id="projetos" className=" mx-auto px-4 py-8 bg-gradient-to-r from-black via-indigo-900 to-black bg-fixed">
     <h1 className="text-3xl font-bold text-center text-amber-400 mt-28">Projetos</h1>
     <div className="flex justify-start mb-8">
       <a href={Curriculo} download="Curriculo.pdf" target="_blank" className=" block bg-blue-500 hover:bg-blue-700 w-32 font-bold py-2 px-4 rounded text-amber-400">Download CV</a>
