@@ -23,14 +23,14 @@ const Banner = () => {
                 href="https://wa.me/38992182727"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-blue-500 hover:bg-blue-700 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline mt-4 text-amber-400 inline-block"
+                className="bg-blue-500 hover:bg-blue-700 font-bold py-2 px-8 rounded focus:outline-none focus:shadow-outline mt-4 text-amber-400 inline-block"
               >
                 Fale Comigo
               </a>
-              <div className="flex  justify-center md:justify-center mt-4">
+              <div className="flex  justify-center md:justify-start  mt-4">
                 {/* WhatsApp */}
                 <a href="https://wa.me/38992182727" target="_blank" rel="noopener noreferrer" className="text-white">
-                  <FaWhatsapp className="h-6 w-6 ml-4 mr-4" />
+                  <FaWhatsapp className="h-6 w-6 mr-4 ml-4"/>
                 </a>
                 {/* LinkedIn */}
                 <a href="https://www.linkedin.com/in/marconesb/" target="_blank" rel="noopener noreferrer" className="text-white">
