@@ -15,7 +15,7 @@ const Banner = () => {
       >
         <div className="container mx-auto flex flex-col md:flex-row items-center justify-center mb-8">
           <div className="md:w-1/2 md:pr-4 lg:pr-8 flex justify-center items-center">
-            <div className="apresentacao text-center md:text-left md:ml-32">
+            <div className="text-center md:text-left md:ml-32">
               <h1 className="text-5xl font-bold mb-4 text-amber-400">Marcone Silva de Brito</h1>
               <p className="text-white text-justify text-orange-30 text-2xl mb-8 mt-8">Front-End Developer</p>
               <p className='text-yellow-600 text-justify text-orange-30 text-2xl mb-8 mt-8'><em>"Escrevo códigos e contribuo para transformar a Web com bytes de informação"</em></p>
@@ -27,10 +27,10 @@ const Banner = () => {
               >
                 Fale Comigo
               </a>
-              <div className="flex justify-center md:justify-start mt-4">
+              <div className="flex  justify-center md:justify-center mt-4">
                 {/* WhatsApp */}
                 <a href="https://wa.me/38992182727" target="_blank" rel="noopener noreferrer" className="text-white">
-                  <FaWhatsapp className="h-6 w-6 mr-4" />
+                  <FaWhatsapp className="h-6 w-6 ml-4 mr-4" />
                 </a>
                 {/* LinkedIn */}
                 <a href="https://www.linkedin.com/in/marconesb/" target="_blank" rel="noopener noreferrer" className="text-white">
