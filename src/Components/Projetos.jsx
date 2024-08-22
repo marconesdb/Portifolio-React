@@ -6,7 +6,7 @@ import Lacosdeamor from '../assets/img/lacosdeamor-2.png';
 import SolarDeJesus from '../assets/img/solardejeus-2.png';
 import TrabalhadoresDaUltimaHora from '../assets/img/trabalhadoresdaultimahora.png';
 import Avatar2 from '../assets/img/avatar2.png';
-import Curriculo from '../assets/img/Currículo  7º Período - Marcone Silva de Brito.pdf';
+import Curriculo from '../assets/img/Currículo  8º Período - Marcone Silva de Brito.pdf';
 
 const projects = [
   {
