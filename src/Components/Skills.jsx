@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { FaHtml5, FaCss3Alt, FaJsSquare, FaReact, FaBootstrap, FaGithub, FaNodeJs, FaPhp } from 'react-icons/fa';
-import { SiTypescript, SiTailwindcss } from 'react-icons/si';
+import { SiTypescript, SiTailwindcss, SiFigma } from 'react-icons/si'; // Importando o ícone do Figma
 
 export default function Skills() {
   const [isVisible, setIsVisible] = useState(false);
@@ -34,7 +34,7 @@ export default function Skills() {
             <motion.div
               whileHover={{ rotateY: 180 }}
               transition={{ duration: 0.9 }}
-              className="text-6xl md:text-9xl text-indigo-500 m-2" // Alterado para indigo-500
+              className="text-6xl md:text-9xl text-indigo-500 m-2"
             >
               <FaPhp title="PHP" />
             </motion.div>
@@ -100,6 +100,13 @@ export default function Skills() {
               className="text-6xl md:text-9xl text-green-600 m-2"
             >
               <FaNodeJs title="Node.js" />
+            </motion.div>
+            <motion.div
+              whileHover={{ rotateY: 180 }}
+              transition={{ duration: 0.9 }}
+              className="text-6xl md:text-9xl text-pink-600 m-2"
+            >
+              <SiFigma title="Figma" /> {/* Ícone do Figma */}
             </motion.div>
           </div>
         </motion.section>
